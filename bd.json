@@ -1,0 +1,36 @@
+{
+  "clientes": [
+    {
+      "nombre": "karen",
+      "empresa": "karen gatos sl",
+      "email": "karen@gatos.com",
+      "telefono": "987654321",
+      "notas": "arena para gatos",
+      "id": 5
+    },
+    {
+      "nombre": "Reserva",
+      "empresa": "prueba empresa sa",
+      "email": "qerg@kslf.es",
+      "telefono": "654326543",
+      "notas": "gfkjgnr",
+      "id": 6
+    },
+    {
+      "nombre": "Goku",
+      "empresa": "KameHouse SL",
+      "email": "Goku@nosoyungatito.com",
+      "telefono": "",
+      "notas": "",
+      "id": 7
+    },
+    {
+      "nombre": "Agumon",
+      "empresa": "digimon",
+      "email": "agumon@gmail.com",
+      "telefono": "987654321",
+      "notas": "cambiado?",
+      "id": 8
+    }
+  ]
+}
