@@ -23,7 +23,12 @@ const Home = () => {
   }, []);
 
   const handelEliminar = async (clienteId) => {
-    const confirmar = confirm("¿Seguro que quiere eliminar a este cliente ?");
+    const clienteEliminar = clientes.filter(
+      (cliente) => cliente.id === clienteId
+    );
+    const confirmar = confirm(
+      `¿Seguro que quiere eliminar a este cliente: ${clienteEliminar[0].nombre} ?`
+    );
 
     if (confirmar) {
       try {
