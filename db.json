@@ -23,14 +23,6 @@
       "telefono": "",
       "notas": "",
       "id": 7
-    },
-    {
-      "nombre": "Agumon",
-      "empresa": "digimon",
-      "email": "agumon@gmail.com",
-      "telefono": "987654321",
-      "notas": "cambiado?",
-      "id": 8
     }
   ]
 }
