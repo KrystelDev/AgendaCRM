@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Spinner from "../components/Spinner";
 
 const VerCliente = () => {
-  const [cliente, setCliente] = useState({});
+  const [cliente, setCliente] = useState();
   const [cargando, setCargando] = useState(true);
 
   const { id } = useParams();
@@ -15,10 +15,10 @@ const VerCliente = () => {
         const respuesta = await fetch(url);
         const resultado = await respuesta.json();
         setCliente(resultado);
+        setCargando(!cargando);
       } catch (error) {
         console.log(error);
       }
-      setCargando(!cargando);
     };
     obtenerClienteAPI();
   }, []);

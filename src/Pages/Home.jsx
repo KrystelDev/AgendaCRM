@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import Cliente from "../components/Cliente";
+import Spinner from "../components/Spinner";
 
 const Home = () => {
-  const [clientes, setclientes] = useState([]);
+  const [clientes, setclientes] = useState();
+  const [cargando, setCargando] = useState(true);
+
   useEffect(() => {
     const obtenercleintesAPI = async () => {
       try {
@@ -11,6 +14,7 @@ const Home = () => {
         const resultado = await respuesta.json();
 
         setclientes(resultado);
+        setCargando(false);
       } catch (error) {
         console.log(error);
       }
@@ -39,8 +43,13 @@ const Home = () => {
     }
   };
 
-  return (
+  return cargando ? (
+    <Spinner />
+  ) : Object.keys(clientes).length === 0 ? (
+    <p>No hay clientes registrados</p>
+  ) : (
     <>
+      {console.log("return")}
       <h1 className="font-black text-4xl text-blue-900">Clientes</h1>
       <p className="mt-3">Administra tus clientes</p>
       {clientes.length > 0 ? (
